@@ -1,0 +1,22 @@
+{
+  "name": "evaluation-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aqeel raza",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "express": "^4.16.4",
+    "geolocation": "^0.2.0",
+    "ip": "^1.1.5",
+    "iplocation": "^6.1.0",
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0",
+    "weather": "^0.1.0",
+    "weather-js": "^2.0.0"
+  }
+}
