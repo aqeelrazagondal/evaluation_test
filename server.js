@@ -57,6 +57,6 @@ app.get("/currentLocationTemp", function(req, res) {
   });
 });
 
-app.listen(port, () => {
+app.listen(3000, function(req, res) {
   console.log("Server is listening on port ", port);
 });
