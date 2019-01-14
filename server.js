@@ -6,6 +6,10 @@ const iplocation = require("iplocation").default;
 var app = express();
 var port = 3000;
 
+app.get("/", function(req, res) {
+  res.json("Server is running");
+});
+
 app.get("/city/:cityname", function(req, res) {
   let city = req.params.cityname;
   // Options:
