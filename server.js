@@ -4,7 +4,6 @@ var ip = require("ip");
 const iplocation = require("iplocation").default;
 
 var app = express();
-var port = 3000;
 
 app.get("/", function(req, res) {
   res.send("Server is running");
@@ -57,6 +56,5 @@ app.get("/currentLocationTemp", function(req, res) {
   });
 });
 
-app.listen(3000, function(req, res) {
-  console.log("Server is listening on port ", port);
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => winston.info(`Listening on port ${port}...`));
