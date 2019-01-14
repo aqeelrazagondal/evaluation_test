@@ -1,8 +1,9 @@
+# Base Url: 
 ## 1:  Get City temprature by location name or zipcode
-    ### END POINT:  /city/:cityname
+   ### END POINT:  /city/:cityname
 
-    ### Method: GET
-    ### URL Params : cityname
+    # Method: GET
+    # URL Params : cityname
 
     Success Response:
     {
@@ -11,8 +12,8 @@
     }
 
 ## 2:  Get City temprature by IP based
-    ### END POINT: /currentLocationTemp
-    ### Method: GET
+    # END POINT: /currentLocationTemp
+    # Method: GET
 
     Success Response:
     {
