@@ -7,7 +7,7 @@ var app = express();
 var port = 3000;
 
 app.get("/", function(req, res) {
-  res.json("Server is running");
+  res.send("Server is running");
 });
 
 app.get("/city/:cityname", function(req, res) {
@@ -22,7 +22,7 @@ app.get("/city/:cityname", function(req, res) {
       city: result[0].location["name"],
       temperature: result[0].current["temperature"]
     };
-    res.json(response);
+    res.send(response);
   });
 });
 
@@ -30,7 +30,7 @@ app.get("/currentLocationTemp", function(req, res) {
   let ipAddress = ip.address();
   console.log("Ip address ", ipAddress);
   iplocation(ipAddress, [], (error, resp) => {
-    if (error) res.json(error);
+    if (error) res.send(error);
 
     console.log(resp);
     // Options:
@@ -46,10 +46,10 @@ app.get("/currentLocationTemp", function(req, res) {
           city: result[0].location["name"],
           temperature: result[0].current["temperature"]
         };
-        res.json(resp);
+        res.send(resp);
       });
     } else {
-      res.json({
+      res.send({
         status: false,
         message: "City not found by Ip Address"
       });
